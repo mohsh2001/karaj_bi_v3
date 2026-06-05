@@ -9,7 +9,7 @@ categories    = opts["categorical"]
 bmt           = opts["brand_model_trim"]
 bmb           = opts["brand_model_body"]
 MAE = 1800
-st.set_page_config(page_title="Karaj Bi — Car Price Predictor", page_icon="🚗", layout="centered")
+st.set_page_config(page_title="Karaj Ai — Car Price Predictor", page_icon="🚗", layout="centered")
 st.markdown("""
 <style>
 .stApp { background-color: #062E2E; color: #E6F2F2; }
@@ -81,7 +81,7 @@ div[data-testid="stAlert"] {
 </style>
 """, unsafe_allow_html=True)
 st.markdown('<span class="tag-pill">USED CAR PRICING</span>', unsafe_allow_html=True)
-st.title("Karaj Bi — Used Car Price Predictor")
+st.title("Karaj Ai — Used Car Price Predictor")
 st.caption("Enter the car details and get an estimated market price (JOD).")
 col1, col2 = st.columns(2)
 with col1:
