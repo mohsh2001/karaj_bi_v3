@@ -5,11 +5,11 @@
 
 **Project:** Karaj Bi — Used Car Price Intelligence for the Jordanian Market
 
-**Author:** _[Your name]_
+**Author:** Mohammad Eyad AlSheikh,Mohammad Emad AlSheikh
 
-**Institution / Program:** _[Add institution / course]_
+**Institution / Program:** Graduation Project
 
-**Date:** _[Add submission date]_
+**Date:** 9/6/2026
 
 
 ## **Table of Content**
@@ -29,19 +29,62 @@
 13. References
 
 
-## **Abstract**
 
-_[Add abstract]_
-
-
-## **Acknowledgment**
-
-_[Add acknowledgment]_
 
 
 ## **Business Intelligence Project Description and Objectives**
 
-_[Add project description and objectives]_
+### Project Description
+
+**Karaj Bi** is an end-to-end Business Intelligence and Machine Learning project focused on the **Jordanian used-car market**. The project transforms raw, unstructured classifieds data from **OpenSooq Jordan** — the country's largest online marketplace for vehicle listings — into a structured analytical asset and a deployable price-prediction tool.
+
+The Jordanian used-car market is highly active but notoriously opaque: prices vary widely across brands, model years, mileage levels, and cities, and sellers and buyers often have no reliable benchmark for what a given vehicle should cost. Listings on OpenSooq are user-submitted and therefore inconsistent in quality, formatting, and completeness, making the data difficult to interpret in raw form.
+
+Karaj Bi addresses this gap by building a complete pipeline that:
+
+1. **Collects** ~15,000 live car listings through a custom asynchronous web scraper.
+2. **Cleans and transforms** the noisy raw data into two analysis-ready datasets — one for BI dashboarding and one for ML modeling.
+3. **Visualizes** the market through a six-page **Power BI dashboard** covering pricing, brands, condition, geography, and trends.
+4. **Models** the market using a **LightGBM regressor** trained to predict the fair market price of a car from its specifications.
+5. **Deploys** the model as a **Streamlit web application** so that any user can input a car's details and receive an instant price estimate with an expected range.
+
+The result is a unified solution combining descriptive analytics (what is happening in the market) with predictive analytics (what a specific car is worth).
+
+### Objectives
+
+**Primary Objective**
+
+To deliver a data-driven decision-support system that brings transparency to used-car pricing in Jordan, enabling buyers, sellers, and analysts to make informed decisions backed by market evidence rather than guesswork.
+
+**Specific Objectives**
+
+1. **Acquire a representative dataset** of the Jordanian used-car market by systematically scraping OpenSooq listings at scale, capturing 25 attributes per vehicle.
+2. **Engineer a clean, trustworthy price signal** by filtering installment listings, removing within-group outliers, and computing a reliable `final_price` target for every vehicle group.
+3. **Build a multi-perspective BI dashboard** that surfaces actionable insights across six analytical dimensions — market overview, price intelligence, brand and model analysis, condition and mileage impact, regional trends, and market trends.
+4. **Develop a high-accuracy price prediction model** capable of estimating used-car prices within a useful tolerance band for end users (target: R² > 0.80, MAE within a few thousand JOD).
+5. **Deploy an accessible inference interface** that hides all underlying complexity (data cleaning, encoding, feature engineering) behind a simple form-based web app.
+6. **Demonstrate an end-to-end BI/AI pipeline** — from raw web data to production-style deployment — as a complete academic and portfolio deliverable.
+
+### Target Audience
+
+- **Car buyers** — to verify that a listing is fairly priced before negotiating.
+- **Car sellers** — to set a competitive asking price based on market data.
+- **Market analysts and dealers** — to identify segment trends, regional differences, and depreciation patterns.
+- **Academic reviewers** — as a demonstration of a complete BI + ML lifecycle on a real-world, locally relevant dataset.
+
+### Scope and Boundaries
+
+| In Scope | Out of Scope |
+|---|---|
+| Used cars listed on OpenSooq Jordan | Other marketplaces (e.g., dealer-only platforms, social media) |
+| Cash-priced listings (full vehicle price) | Installment / monthly-payment listings (used only as filter) |
+| Vehicles from model year 1970 onward | Classic/antique cars before 1970 |
+| Listing-level attributes (specs, condition, location) | Seller behavior, negotiation patterns, transaction outcomes |
+| Snapshot-based analysis | Real-time price tracking or time-series forecasting |
+
+### Business Value
+
+Karaj Bi turns a fragmented, low-trust pricing environment into a **measurable, queryable, and predictable** one. The Power BI dashboard provides strategic visibility into the shape of the market, while the predictive model delivers tactical, vehicle-level pricing guidance — together forming a complete BI solution that bridges exploratory analysis and operational decision-making.
 
 
 ## **Data Research and Acquiring Effort**
@@ -419,4 +462,8 @@ _[Add final results summary: model performance numbers, dashboard takeaways, bus
 
 ## **References**
 
-_[Add references: OpenSooq, LightGBM paper, pandas, scikit-learn, Power BI documentation, etc.]_
+https://lightgbm.readthedocs.io/en/stable/
+https://learn.microsoft.com/en-us/power-bi/
+https://pandas.pydata.org/docs/
+https://beautiful-soup-4.readthedocs.io/en/latest/
+https://jo.opensooq.com/ar/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%88%D9%85%D8%B1%D9%83%D8%A8%D8%A7%D8%AA/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%84%D9%84%D8%A8%D9%8A%D8%B9?search=true&sort_code=price+
